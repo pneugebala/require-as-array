@@ -1,0 +1,12 @@
+{
+  "name": "require-as-array",
+  "version": "0.0.1",
+  "description": "Requiring all files/directories in given path and returning an array.",
+  "main": "src/index.js",
+  "repository": "https://github.com/pneugebala/require-as-array",
+  "author": "pneugebala",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^5.0.0"
+  }
+}
