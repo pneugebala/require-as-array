@@ -1,6 +1,13 @@
 const fs = require('fs')
 const nPath = require('path')
 
+/**
+ * Starts the requiring process
+ *
+ * @param {string} path - The path to use
+ * @param {function} cb - Callback for aynchronous operation result (optional)
+ * @return {object} Result for synchronously required modules
+ */
 function start (path, cb) {
   if (typeof cb === 'undefined') {
     if (typeof path !== 'string')
@@ -15,12 +22,24 @@ function start (path, cb) {
   }
 }
 
+/**
+ * Requires all modules with given path synchronously
+ *
+ * @param {string} path - The path to use
+ * @return {object} List of required modules
+ */
 function doSync (path) {
   const list = fs.readdirSync(path)
   const result = iterate(path, list)
   return result
 }
 
+/**
+ * Requires all modules with given path asynchronously
+ *
+ * @param {string} path - The path to use
+ * @param {function} cb - Callback for result
+ */
 function doAsync (path, cb) {
   fs.readdir(path, (err, list) => {
     if (err) {
@@ -36,6 +55,13 @@ function doAsync (path, cb) {
   })
 }
 
+/**
+ * Iterates over module list and calls require
+ *
+ * @param {string} path - The path to use
+ * @param {object} list - The list to use
+ * @return {object} List of required modules
+ */
 function iterate (path, list) {
   const result = []
   let str = null
