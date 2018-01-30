@@ -1,6 +1,6 @@
 {
-  "name": "require-as-array",
-  "version": "0.0.1",
+  "name": "@pneugebala/require-as-array",
+  "version": "0.1.0",
   "description": "Requiring all files/directories in given path and returning an array.",
   "main": "src/index.js",
   "repository": "https://github.com/pneugebala/require-as-array",

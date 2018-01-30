@@ -4,6 +4,16 @@
 
 Requiring all files/directories in given path and returning an array.
 
+### Installation:
+```
+npm install @pneugebala/require-as-array
+```
+or
+```
+yarn add @pneugebala/require-as-array
+```
+
+
 ### Example:
 ```javascript
 // Directory structure:
