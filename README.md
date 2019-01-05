@@ -41,4 +41,4 @@ requireAsArray("./entry", (err, result) => {
 })
 ```
 
-Instead of a nested object, only an array with all required modules is returned.
+Instead of a nested object, only an array with all required modules gets returned.
